@@ -1,16 +1,4 @@
-const express = require("express")
-const router = router.express()
+const express = require("express");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt")
 
-
-
-router.import {  } from "module";(/"signup",(req,res) =>{
-      res.send("this is from signup endpoint")
-})
-
-router.get("/signin",(req,res)=>{
-  res.send("this is from signin endpoint")
-
-})
-
-router.
-app.listen(3000)
