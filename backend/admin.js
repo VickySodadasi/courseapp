@@ -1,16 +1,23 @@
-const express = require("express");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const {adminRouter} = require("express");
 
-router.post("/signup",req,res()=>{
-  res.send("hello this is from sign up end point");
-})
+adminRouter.post("/signup",(req,res) => {
+  res.json({
+    message:"this is from signup end point "
+  })
+});
 
-router.post("/signin",req,res()=>{
-  res.send("this is from signin endpoint");
+adminRouter.post("/signin",(req,res)=>{
+  res.json({
+    message:"this is from signin end point"
+  })
+});
 
-})
+adminRouter.get("/course",(req,res)=>{
+  res.json({
+    message:"this is from course end poiont"
+  })
+});
 
-router.post("/deleteuser"req,res()=>{
-  res.send("this is from delete end point");
-})
+module.exports = {
+  adminRouter : adminRouter
+}
